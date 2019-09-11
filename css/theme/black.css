@@ -12,7 +12,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
  *********************************************/
 body {
   background: #191919;
-  background-image:url(/images/HuYu-bg.png);
+  background-image:url(images/HuYu-bg.png);
  }
 
 .reveal {
