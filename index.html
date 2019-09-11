@@ -1,0 +1,285 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+		<link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900|Noto+Serif+TC:200,300,400,500,600,700,900&display=swap" rel="stylesheet">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		<style>
+			.slideCon{
+				height: 100vh;
+				width: 100vw;
+				/* position:relative; */
+				padding: 0px;
+			}
+			video{
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				/* transform: translate(-50%,-50%); */
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				padding: 0px;
+			}
+			section{
+				margin:0px;
+				padding:0px;
+			}
+			.block1{
+				width:100%;
+				height:300px;
+			}
+			.block2{
+				width:100%;
+				height:30px;
+			}
+			.block3{
+				width:100%;
+				height:70px;
+			}
+			.persona{
+				width: 100vw;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-markdown data-background-image="../images/ppt/pptcover.png" data-background-size="100%" data-background-repeat="no-repeat" ><!-------1.封面------->
+					<div class="section1">
+							<script type="text/template">
+								<div class="block1"></div>
+								<h1>忽浴 網站企劃簡報</h1> <!-- .element: class="fragment" data-fragment-index="1" -->
+								<div class="block2"></div>
+								<h2>李炳寬、陳志嘉、林妍均</h2> <!-- .element: class="fragment" data-fragment-index="2" -->
+							</script>
+					</div>
+				</section>
+				<section data-background-video="../video/no-logo.mp4" data-background-video-loop="true"><!-------2.滿版影片------->
+					<!-- <div class="slideCon">
+						<video src="../video/no-logo.mp4" autoplay muted loop></video>
+					</div> -->
+				</section>
+				<section><!-------3.LOGO大圖------->
+					<h1>Logo大圖</h1>
+					<div class="block3"></div>
+					<img height="550" src="../images/ppt/logo.png" alt="">
+				</section>
+				<section><!-------4.PERSONA兩個妹子------->
+					<h1>Persona</h1>
+					<div class="block3"></div>
+					<div class="block3"></div>
+					<img class="persona" src="../images/ppt/persona.png" alt="">
+				</section>
+				<section><!-------5.網站素材(核心路徑圖、FLOW CHART、UI FLOW、FUNCTIONAL MAP)------->
+					<section>
+							<h1>核心路徑圖</h1>
+							<img height="800" src="../images/ppt/picture-03.png" alt="">
+					</section>
+					<section>
+							<h1>FLOW CHART</h1>
+							<img height="850" src="../images/ppt/flowchart.png" alt="">
+					</section>
+					<section>
+							<h1>UI FLOW</h1>
+							<img height="800" src="../images/ppt/uiflow.png" alt="">
+					</section>
+					<section>
+							<h1>FUNCTIONAL MAP</h1>
+							<div class="block2"></div>
+							<img height="750" src="../images/ppt/FunctionMap.png" alt="">
+					</section>
+				</section>
+				<section><!-------6.產品介紹------->
+					<h1>產品介紹</h1>
+					<div class="block2"></div>
+					<img height="750" src="../images/ppt/product.png" alt="">
+				</section>
+				<section><!-------7.主色彩------->
+					<h1>主色彩</h1>
+					<img style="margin-top: 40px" height="800" src="../images/ppt/color.png" alt="">
+				</section>
+				<section><!-------8.網站導覽------->
+					<a href="../index.php" target="_blank"><h1>出發！前去忽浴</h1></a>
+				</section>
+				<section><!-------9.網站開發技術------->
+					<h1>網站開發技術</h1>
+					<ul>
+						<li>HTML</li>
+						<li>CSS</li>
+						<li>JavaScript</li>
+						<li>Parallax.js</li>
+						<li>skrollr.js</li>
+						<li>jQuery</li>
+						<li>Lodash</li>
+						<li>Vue</li>
+						<li>PHP</li>
+						<li>SQL</li>
+					</ul>
+					<img style="margin: 40px" height="600" src="../images/ppt/LOGOS.png" alt="">
+				</section>
+				<section><!-------10.合作分工------->
+					<h1>合作分工</h1>
+					<div class="block3"></div>
+					<img height="650" src="../images/ppt/name.png" alt="">
+				</section>
+			</div>
+		</div>
+		
+<!-- 基本上section裡面放的東西就會呈現水平擺放，如果想要在第三頁可以往上下滑動，那就是第三個section裡面再放section，子層的section就會判定是水平滑動 -->
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true },
+				]
+				,markdown: {
+					smartypants: true
+				},
+				controls: true, // 控制箭頭顯示
+
+				controlsTutorial: true, //vertical的頁面，向下的箭頭彈跳，以提醒用戶
+
+				controlsLayout: 'bottom-right', //控制箭頭的位置，有"edges"跟"bottom-right"兩個可以選
+
+				controlsBackArrows: 'faded', //回前一頁的箭頭要淡化"faded"、隱藏"hidden"
+
+				progress: true, //螢幕下方顯示進度條
+
+				slideNumber: false, //投影片頁數顯示
+
+				hash: false, //每個頁面產生對應的網址
+				
+				history: false, //每個頁面的瀏覽存進瀏覽紀錄(前者hash必須打開)
+				
+				keyboard: true, //鍵盤控制播放
+				
+				overview: true, //啟用幻燈片概覽模式
+
+				center: true, //垂直置中
+				
+				touch: true, //行動裝置開啟觸控控制
+
+				loop: false, //循環播放
+
+				rtl: false, //反方向播放
+
+				navigationMode: 'default', //default為預設，Linear則為線性(把垂直也變成水平的播放)，grid則為網格，連續兩個垂直，1-3往右會跳到2-3(若預設則會到2-1)
+
+				shuffle: false, //頁面隨機
+
+				fragments: true, //開啟片段播放
+
+				fragmentInURL: false, //將片段寫進URL，可以透過網址直接到特定頁數特定片段
+
+				embedded: true,
+				// Flags if the presentation is running in an embedded mode,
+				// i.e. contained within a limited portion of the screen
+
+				help: true,
+				// Flags if we should show a help overlay when the questionmark
+				// key is pressed
+				
+				showNotes: true,
+				// Flags if speaker notes should be visible to all viewers
+				
+				autoPlayMedia: null,
+				// Global override for autoplaying embedded media (video/audio/iframe)
+				// - null: Media will only autoplay if data-autoplay is present
+				// - true: All media will autoplay, regardless of individual setting
+				// - false: No media will autoplay, regardless of individual setting
+
+				preloadIframes: null,
+				// Global override for preloading lazy-loaded iframes
+				// - null: Iframes with data-src AND data-preload will be loaded when within
+				//   the viewDistance, iframes with only data-src will be loaded when visible
+				// - true: All iframes with data-src will be loaded when within the viewDistance
+				// - false: All iframes with data-src will be loaded only when visible
+				// Number of milliseconds between automatically proceeding to the
+				// next slide, disabled when set to 0, this value can be overwritten
+				// by using a data-autoslide attribute on your slides
+
+				autoSlide: 0,
+
+				autoSlideStoppable: true,
+				// Stop auto-sliding after user input
+				
+				autoSlideMethod: Reveal.navigateNext,
+				// Use this method for navigation when auto-sliding
+
+				defaultTiming: 200, //每個頁面可以演講的時間
+
+				mouseWheel: true, //滑鼠滾輪控制
+
+				hideInactiveCursor: true, //自動隱藏滑鼠
+
+				hideCursorTime: 500, //閒置幾秒隱藏滑鼠(in ms)，
+
+				hideAddressBar: true, //行動裝置上隱藏網址欄位
+
+				previewLinks: false,
+				// Opens links in an iframe preview overlay
+				// Add `data-preview-link` and `data-preview-link="false"` to customise each link
+				// individually
+
+				transition: 'slide', // 播放的滑動方式！none/fade/slide/convex/concave/zoom
+
+				transitionSpeed: 'slow', // 滑動的速度，default/fast/slow，我先改slow，感覺慢得很有質感
+
+				backgroundTransition: 'fade', // 背景的滑動方式！none/fade/slide/convex/concave/zoom
+
+				viewDistance: 3, //播放的投影片附近3張皆顯示，其餘隱藏
+
+				
+				parallaxBackgroundImage: '', //視差背景圖
+				// e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+
+				parallaxBackgroundSize: '',  //視差圖大小
+				// CSS syntax, e.g. "2100px 900px"
+
+				parallaxBackgroundHorizontal: null, //視差移動的計算模式
+				parallaxBackgroundVertical: null,
+				// Number of pixels to move the parallax background per slide
+				// - Calculated automatically unless specified
+				// - Set to 0 to disable movement along an axis
+
+				//以下為控制內容是否為全螢幕
+				display: 'block', 
+				width: "100%",
+				height: "100%",
+				margin: 0,
+				minScale: 1,
+				maxScale: 1
+			});
+			Reveal.configure({ autoSlide: 0 }); //自動播放
+
+		</script>
+	</body>
+</html>
